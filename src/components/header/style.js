@@ -10,11 +10,13 @@ export const Container = styled.div`
         width: 150px;
         margin: 5px;
 
+
     }
 
     form {
         display: flex;
         margin-top: 10px;
+        
         
         input {
             padding: 10px;
@@ -35,6 +37,7 @@ export const Container = styled.div`
             border-left: none;
             border-radius: 0px 5px 5px 0px;
             background-color: #febd69;
+            transition: 0.2s;
 
             &:hover {
                 opacity: .75;
@@ -50,6 +53,11 @@ export const Container = styled.div`
         margin-top: auto;
         &:hover{
             color: #ffb540;
+    }
+    p{
+        margin: 10px 10px 10px 0;
+        color: #fff;
+        
     }
     li {
         font-size: 30px;

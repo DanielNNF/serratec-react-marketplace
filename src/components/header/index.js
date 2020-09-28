@@ -5,12 +5,16 @@ import { Container} from './style'
 import { FiSearch } from 'react-icons/fi';
 import { MdShoppingCart } from 'react-icons/md'
 import { ImExit } from 'react-icons/im'
+import { AiOutlineUser } from 'react-icons/ai'
 
 
 
 const Header = () => {
     const history = useHistory();
     const [query, setQuery] = useState('');
+    const [getItem, setGetItem] = useState (localStorage.getItem("@AMAZONIA:user"))
+    
+    
 
     return (
         <>
@@ -32,12 +36,17 @@ const Header = () => {
                 </form>
 
                 <ul>
+                <p>Bem vindo : {() => (getItem.nome)}</p>
+                    <li>
+                    <Link to='/cart'> <AiOutlineUser /></Link>
+                    </li>
                     <li>
                     <Link to='/cart'> <MdShoppingCart /></Link>
                     </li>
                     <li onClick={() => localStorage.removeItem("@AMAZONIA:user")}>
-                    <Link to='/'><ImExit /></Link>
+                    <Link to='/home'><ImExit /></Link>
                     </li>
+                    
 
                 </ul>
 
