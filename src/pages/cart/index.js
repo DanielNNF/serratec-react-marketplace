@@ -12,7 +12,7 @@ const Cart = () => {
     const handleCarrinho = () => {
         let cart = JSON.parse(localStorage.getItem('@AMAZONIA:cart'));
 
-        //Sets cart to localStorage data if available or to an empty list if empty
+     
         setCarrinho(cart ? cart : [])
     }
 
@@ -81,7 +81,7 @@ const Cart = () => {
 
                                     </div>
 
-                                    <h4>x{product.qtd}</h4>
+                                    <h4>x {product.qtd}</h4>
 
                                 </div>
                             </div>
@@ -91,12 +91,13 @@ const Cart = () => {
 
                 ))}
                 <CartInfo>
-                    <h4>Total:{loadCartInfo()}</h4>
+                    <h4>Total: {loadCartInfo()}</h4>
                     <Link to={{
                         pathname: '/checkout',
                         state: {
                             finished: true
                         }
+                        
                     }}><button>Finalizar compra</button>
                     </Link>
                     <CartInfo>

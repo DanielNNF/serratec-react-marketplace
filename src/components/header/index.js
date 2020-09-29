@@ -12,7 +12,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 const Header = () => {
     const history = useHistory();
     const [query, setQuery] = useState('');
-    const [getItem, setGetItem] = useState (localStorage.getItem("@AMAZONIA:user"))
+    const [getItem, setGetItem] = useState (localStorage.getItem("@AMAZONIA:cliente"))
     
     
 
@@ -36,7 +36,7 @@ const Header = () => {
                 </form>
 
                 <ul>
-                <p>Bem vindo : {() => (getItem.nome)}</p>
+                <p>Bem vindo : {() => (getItem.cliente)}</p>
                     <li>
                     <Link to='/cart'> <AiOutlineUser /></Link>
                     </li>

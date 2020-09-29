@@ -111,7 +111,7 @@ const Search = () => {
               value={minValue}
               min='0'
               max={maxValue}
-              onChange={e => setMinValue(e.target.value)}
+              onChange={e => setMinValue(e.target.value)}   
               placeholder="min"
             />
             <input
@@ -120,11 +120,13 @@ const Search = () => {
               min={minValue}
               onChange={e => setMaxValue(e.target.value)}
               placeholder="max"
+              min={minValue ? minValue : 0}
             />
             <input
               type="button"
               value="Aplicar"
               onClick={() => minValue && maxValue && setActivePriceFilter(true)}
+              
             />
           </Price> :
           <PriceActive>
